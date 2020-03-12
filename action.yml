@@ -1,13 +1,13 @@
-name: "Python Container Action Template"
-description: "Get started with Python Container actions"
-author: "Jacob Tomlinson"
+name: "Gensim Summarizer"
+description: "Summarizes text data in a file"
+author: "Akshay Ashok"
 inputs:
-  myInput:
-    description: "Input to use"
-    default: "world"
+  path:
+    description: "Path to the file to be Summarized"
+    required: true
 outputs:
-  myOutput:
-    description: "Output from the action"
+  summary:
+    description: "The summary of text data in file by gensim"
 runs:
   using: "docker"
   image: "Dockerfile"
