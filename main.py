@@ -7,7 +7,7 @@ def main():
     summary = "no summary"
     
     with open(file_path, 'r') as file:
-        text = file.read().replace('\n', '')   
+        text = file.read()
         summary = summarize(text)
         
     print(f"::set-output name=summary::{summary}")
