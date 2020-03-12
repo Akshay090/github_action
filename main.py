@@ -1,14 +1,16 @@
 import os
-import requests  # noqa We are just importing this to prove the dependency installed correctly
-
+import sys
+from gensim.summarization.summarizer import summarize
 
 def main():
-    my_input = os.environ["INPUT_MYINPUT"]
-
-    my_output = f"Hello {my_input}"
-
-    print(f"::set-output name=myOutput::{my_output}")
-
-
+    file_path = os.environ["INPUT_PATH"]
+    summary = "no summary"
+    
+    with open(file_path, 'r') as file:
+        text = file.read().replace('\n', '')   
+        summary = summarize(text)
+        
+    print(f"::set-output name=summary::{summary}")
+    
 if __name__ == "__main__":
     main()
