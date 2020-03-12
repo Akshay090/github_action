@@ -1,4 +1,5 @@
-FROM python:3-slim AS builder
+FROM ubuntu:18.04
+FROM python:3.7 AS builder
 ADD . /app
 WORKDIR /app
 
