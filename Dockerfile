@@ -5,5 +5,5 @@ WORKDIR /app
 RUN pip install --target=/app gensim
 ENV PYTHONPATH /app
 RUN chmod +x /app/main.py
-RUN echo $INPUT_OATH
-CMD echo $INPUT_OATH
+RUN echo $INPUT_PATH
+CMD echo $INPUT_PATH
