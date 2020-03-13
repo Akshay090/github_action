@@ -1,9 +1,9 @@
-name: "Gensim Summarizer"
+name: "Gensim Summarizer action"
 description: "Summarizes text data in a file"
 author: "Akshay Ashok"
 inputs:
   path:
-    description: "Path to the file to be Summarized"
+    description: "Path to the text file to be Summarized"
     required: true
 outputs:
   summary:
