@@ -5,4 +5,4 @@ WORKDIR /app
 RUN pip install --target=/app gensim
 ENV PYTHONPATH /app
 RUN chmod +x /app/main.py
-CMD python3 /app/main.py
+RUN python3 /app/main.py
