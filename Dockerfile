@@ -4,4 +4,5 @@ ADD . /app
 WORKDIR /app
 RUN pip install --target=/app gensim
 ENV PYTHONPATH /app
+RUN chmod +x /app/main.py
 CMD ["/app/main.py"]
